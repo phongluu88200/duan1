@@ -26,8 +26,9 @@ public class ThongKeJFrame extends javax.swing.JFrame {
      */
     public ThongKeJFrame(int index) {
         initComponents();
-        jTabbedPane1.setSelectedIndex(index);
-        init();
+        this.setLocationRelativeTo(this);
+        //jTabbedPane1.setSelectedIndex(index);
+      //  init();
         
     }
 
@@ -230,7 +231,7 @@ public class ThongKeJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField txtNam;
     // End of variables declaration//GEN-END:variables
 
-   void init()
+  /* void init()
    {
           this.setLocationRelativeTo(null);
           this.setTitle("Thống kê tổng hợp");
@@ -239,7 +240,7 @@ public class ThongKeJFrame extends javax.swing.JFrame {
    
    }
    
-   ThongKeDAO dao=new ThongKeDAO();
+   ThongKeDAO dao=new ThongKeDAO();*/
  
     
 
