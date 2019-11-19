@@ -12,7 +12,7 @@ import java.util.Date;
  * @author HP
  */
 public class GiaoDich {
-    public String maGD;
+    public String maHD;
     public String ten_KH;
     public String ten_NV;
     public Date ngayBan;
@@ -23,8 +23,8 @@ public class GiaoDich {
     public GiaoDich() {
     }
 
-    public GiaoDich(String maGD, String ten_KH, String ten_NV, Date ngayBan, int DonGia, int SoLuong, int ThanhTien) {
-        this.maGD = maGD;
+    public GiaoDich(String maHD, String ten_KH, String ten_NV, Date ngayBan, int DonGia, int SoLuong, int ThanhTien) {
+        this.maHD = maHD;
         this.ten_KH = ten_KH;
         this.ten_NV = ten_NV;
         this.ngayBan = ngayBan;
@@ -33,12 +33,12 @@ public class GiaoDich {
         this.ThanhTien = ThanhTien;
     }
 
-    public String getMaGD() {
-        return maGD;
+    public String getMaHD() {
+        return maHD;
     }
 
-    public void setMaGD(String maGD) {
-        this.maGD = maGD;
+    public void setMaHD(String maGD) {
+        this.maHD = maGD;
     }
 
     public String getTen_KH() {

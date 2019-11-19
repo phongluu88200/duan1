@@ -19,7 +19,9 @@ import java.util.List;
  */
 public class GiaoDichDAO {
      public List<GiaoDich> select(){
-        String sql="select GiaoDich.id_GD,ten_KH,ten_NV,NgayBan,DonGia,SoLuong,ThanhTien from GiaoDich inner join CTGD on GiaoDich.id_GD=CTGD.id_GD inner join KhachHang on GiaoDich.id_KH=KhachHang.id_KH inner join NhanVien on NhanVien.id_NV=GiaoDich.id_NV";
+        //String sql="select HoaDon.id_HD,ten_KH,ten_NV,NgayBan,DonGia,SoLuong,ThanhTien from HoaDon inner join CTHD on HoaDon.id_HD=CTHD.id_HD inner join KhachHang on HoaDon.id_KH=KhachHang.id_KH inner join NhanVien on NhanVien.id_NV=HoaDon.id_NV";
+        String sql="call sp_GiaoDich";
+        
         return select(sql);
     }
      
@@ -46,7 +48,7 @@ public class GiaoDichDAO {
     
     private GiaoDich readFromResultSet(ResultSet rs) throws SQLException{
         GiaoDich model=new GiaoDich();
-        model.setMaGD(rs.getString("id_GD"));
+        model.setMaHD(rs.getString("id_HD"));
         model.setTen_KH(rs.getString("ten_KH"));
         model.setTen_NV(rs.getString("ten_NV"));
         model.setNgayBan(rs.getDate("NgayBan"));
@@ -57,11 +59,11 @@ public class GiaoDichDAO {
         
         return model;
     }
-   /* 
+   
      public void insert(GiaoDich model){
-        String sql="INSERT INTO KhoaHoc (MaCD, HocPhi, ThoiLuong, NgayKG, GhiChu, MaNV) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql="call sp_GD_Insert (?)";
         JdbcHelper.executeUpdate(sql, 
-                model.getMaGD(), 
+                model.getMaHD(), 
                 model.getTen_KH(), 
                 model.getTen_NV(), 
                 //model.getNgayKG(),
@@ -72,7 +74,7 @@ public class GiaoDichDAO {
         
         );
     }
-    
+    /*
     public void update(GiaoDich model){
         String sql="UPDATE KhoaHoc SET MaCD=?, HocPhi=?, ThoiLuong=?, NgayKG=?, GhiChu=?, MaNV=? WHERE MaKH=?";
         JdbcHelper.executeUpdate(sql, 

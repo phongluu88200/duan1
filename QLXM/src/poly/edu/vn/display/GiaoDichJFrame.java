@@ -5,6 +5,13 @@
  */
 package poly.edu.vn.display;
 
+import com.polypro.dao.GiaoDichDAO;
+import com.polypro.helper.DateHelper;
+import com.polypro.helper.DialogHelper;
+import com.polypro.model.GiaoDich;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author HP
@@ -16,6 +23,8 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
      */
     public GiaoDichJFrame() {
         initComponents();
+        this.setLocationRelativeTo(this);
+        this.setTitle("Quản lý giao dịch");
     }
 
     /**
@@ -58,6 +67,11 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -222,6 +236,11 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
+        tblGridView.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblGridViewMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblGridView);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -288,6 +307,23 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tblGridViewMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblGridViewMouseClicked
+        // TODO add your handling code here:
+        if(evt.getClickCount()==2)
+        {
+           this.index=tblGridView.rowAtPoint(evt.getPoint());
+            if(index>=0)
+            {
+              
+            }
+        }
+    }//GEN-LAST:event_tblGridViewMouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        load();
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
@@ -356,4 +392,38 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField txtSoLuong;
     private javax.swing.JTextField txtThanhTien;
     // End of variables declaration//GEN-END:variables
+   
+    GiaoDichDAO dao=new GiaoDichDAO();
+    int index=0;
+    
+    void load()
+    {
+        DefaultTableModel model=(DefaultTableModel)tblGridView.getModel();
+        model.setRowCount(0);
+       try {
+            List<GiaoDich> list = dao.select();
+            for (GiaoDich sp : list) {
+                Object[] row = {
+                        sp.getMaHD(),
+                        sp.getTen_KH(),
+                        sp.getTen_NV(),
+                        DateHelper.toString(sp.getNgayBan()),
+                        sp.getDonGia(),
+                        sp.getSoLuong(),
+                        sp.getThanhTien()
+                };
+                       
+                model.addRow(row);
+            }
+        } 
+        catch (Exception e) {
+            DialogHelper.alert(this, "Lỗi truy vấn dữ liệu!");
+        }
+    
+    }
+    
+    
+
+
+
 }
