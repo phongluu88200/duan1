@@ -11,6 +11,7 @@ import com.polypro.model.GiaoDich;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -19,8 +20,9 @@ import java.util.List;
  */
 public class GiaoDichDAO {
      public List<GiaoDich> select(){
-        //String sql="select HoaDon.id_HD,ten_KH,ten_NV,NgayBan,DonGia,SoLuong,ThanhTien from HoaDon inner join CTHD on HoaDon.id_HD=CTHD.id_HD inner join KhachHang on HoaDon.id_KH=KhachHang.id_KH inner join NhanVien on NhanVien.id_NV=HoaDon.id_NV";
-        String sql="call sp_GiaoDich";
+       
+        //String sql="select HoaDon.id_HD,KhachHang.id_KH,ten_KH,NhanVien.id_NV,ten_NV,id_SP,NgayBan,DonGia,SoLuong,ThanhTien from HoaDon inner join CTHD on HoaDon.id_HD=CTHD.id_HD inner join KhachHang on HoaDon.id_KH=KhachHang.id_KH inner join NhanVien on NhanVien.id_NV=HoaDon.id_NV";
+        String sql="{call sp_GiaoDich}";
         
         return select(sql);
     }
@@ -47,16 +49,16 @@ public class GiaoDichDAO {
     }
     
     private GiaoDich readFromResultSet(ResultSet rs) throws SQLException{
-        GiaoDich model=new GiaoDich();
-        model.setMaHD(rs.getString("id_HD"));
-        model.setTen_KH(rs.getString("ten_KH"));
-        model.setTen_NV(rs.getString("ten_NV"));
-        model.setNgayBan(rs.getDate("NgayBan"));
-        model.setDonGia(rs.getInt("DonGia"));
-        model.setSoLuong(rs.getInt("SoLuong"));
-        model.setThanhTien(rs.getInt("ThanhTien"));
+        String id_MaHD=rs.getString("id_HD");
       
-        
+        String tenKH=rs.getString("ten_KH");
+        String tenNV=rs.getString("ten_NV");
+        Date ngayBan=rs.getDate("NgayBan");
+        int donGia=rs.getInt("DonGia");
+        int soLuong=rs.getInt("SoLuong");
+        int thanhTien=rs.getInt("ThanhTien");
+      
+        GiaoDich model=new GiaoDich(id_MaHD, tenKH, tenNV, ngayBan, donGia, soLuong, thanhTien);
         return model;
     }
    
@@ -92,4 +94,11 @@ public class GiaoDichDAO {
         String sql="DELETE FROM KhoaHoc WHERE MaKH=?";
         JdbcHelper.executeUpdate(sql, MaKH);
     }*/
+     
+     
+      public GiaoDich findById(String maHD){         
+          String sql="{call sp_GiaoDichFind(?)}";         
+          List<GiaoDich> list = select(sql, maHD);         
+          return list.size() > 0 ? list.get(0) : null;
+      }   
 }

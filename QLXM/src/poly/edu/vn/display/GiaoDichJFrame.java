@@ -11,6 +11,7 @@ import com.polypro.helper.DialogHelper;
 import com.polypro.model.GiaoDich;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.TabSet;
 
 /**
  *
@@ -23,8 +24,10 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
      */
     public GiaoDichJFrame() {
         initComponents();
+        this.setDefaultCloseOperation(2);
         this.setLocationRelativeTo(this);
         this.setTitle("Quản lý giao dịch");
+       
     }
 
     /**
@@ -37,10 +40,10 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        tabs = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        txtMaGD = new javax.swing.JTextField();
+        txtMaHD = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         txtKhachHang = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -126,7 +129,7 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addComponent(jLabel2)
                                         .addGap(18, 18, 18)
-                                        .addComponent(txtMaGD))
+                                        .addComponent(txtMaHD))
                                     .addGroup(jPanel2Layout.createSequentialGroup()
                                         .addGap(22, 22, 22)
                                         .addComponent(btnInsert)
@@ -180,7 +183,7 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
                         .addGap(17, 17, 17)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
-                            .addComponent(txtMaGD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtMaHD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -215,7 +218,7 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
                 .addContainerGap(103, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("CẬP NHẬT", jPanel2);
+        tabs.addTab("CẬP NHẬT", jPanel2);
 
         tblGridView.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -225,7 +228,7 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "MaGD", "Khách hàng", "Nhân viên", "Ngày GD", "Đơn giá", "Số lượng", "Thành tiền"
+                "MaHD", "Khách hàng", "Nhân viên", "Ngày GD", "Đơn giá", "Số lượng", "Thành tiền"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -260,7 +263,7 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("DANH SÁCH", jPanel3);
+        tabs.addTab("DANH SÁCH", jPanel3);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -268,14 +271,14 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
+                .addComponent(tabs)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tabs, javax.swing.GroupLayout.PREFERRED_SIZE, 384, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(57, Short.MAX_VALUE))
         );
 
@@ -315,7 +318,8 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
            this.index=tblGridView.rowAtPoint(evt.getPoint());
             if(index>=0)
             {
-              
+              this.edit();
+               tabs.setSelectedIndex(0);
             }
         }
     }//GEN-LAST:event_tblGridViewMouseClicked
@@ -382,11 +386,11 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane tabs;
     private javax.swing.JTable tblGridView;
     private javax.swing.JTextField txtDonGia;
     private javax.swing.JTextField txtKhachHang;
-    private javax.swing.JTextField txtMaGD;
+    private javax.swing.JTextField txtMaHD;
     private javax.swing.JTextField txtNgayGD;
     private javax.swing.JTextField txtNhanVien;
     private javax.swing.JTextField txtSoLuong;
@@ -422,7 +426,86 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
     
     }
     
+    void edit()
+    {
+       try{
+          String id=(String) tblGridView.getValueAt(this.index, 0);
+         GiaoDich model= dao.findById(id);
+         if(model!=null)
+         {
+            this.setModel(model);
+            this.setStatus(false);
+         }
+       
+       }
+       catch(Exception ex)
+       {
+           DialogHelper.alert(this,"Lỗi truy vấn dữ liệu ");
+       }
+    }
     
+    /* GiaoDich getModel()
+    {
+      
+       String id_GD=txtMaHD.getText();
+       String tenSP=txtTenSP.getText();
+       String id_NCC=txtNCC.getText();
+       String id_Loai=txtLoai.getText();
+       int donGia=Integer.parseInt(txtDonGia.getText());
+       int soLuong=Integer.parseInt(txtSoLuong.getText());
+       GiaoDich model=new GiaoDich
+       
+       return model;
+    }*/
+    
+    void setModel(GiaoDich model)
+    {
+        txtMaHD.setText(model.getMaHD());
+        txtKhachHang.setText(model.getTen_KH());
+        txtNhanVien.setText(model.getTen_NV());
+        txtThanhTien.setText(String.valueOf(model.getThanhTien()));
+        txtNgayGD.setText(DateHelper.toString(model.getNgayBan()));
+        txtSoLuong.setText(String.valueOf(model.getSoLuong()));
+        txtDonGia.setText(String.valueOf(model.getDonGia()));
+    
+    }
+    
+     void setStatus(boolean insertable){
+        //txtMaNV.setEditable(insertable);
+        btnInsert.setEnabled(insertable);
+        btnUpdate.setEnabled(!insertable);
+        btnDelete.setEnabled(!insertable);
+
+        boolean first = this.index > 0;
+        boolean last = this.index < tblGridView.getRowCount() - 1;
+        btnFirst.setEnabled(!insertable && first);
+        btnPrev.setEnabled(!insertable && first);
+        btnNext.setEnabled(!insertable && last);
+        btnLast.setEnabled(!insertable && last);
+    }
+     
+      void clear(){
+        this.setModel(new GiaoDich());
+        this.setStatus(true);
+    }
+    
+   /* void insert()
+    {
+        GiaoDich sp= getModel();
+        try{
+            dao.insert(sp);
+            this.load();
+            this.clear();
+             DialogHelper.alert(this,"Thêm thành công");
+        }
+        catch(Exception ex)
+        {
+          DialogHelper.alert(this,"Thêm thất bại");
+        }
+    
+    }
+    
+    */
 
 
 
