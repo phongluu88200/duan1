@@ -407,6 +407,7 @@ public class SanPhamJFrame extends javax.swing.JFrame {
     private void btnLastActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLastActionPerformed
         // TODO add your handling code here:
         index=tblGridView.getRowCount()-1;
+        this.edit();
     }//GEN-LAST:event_btnLastActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened

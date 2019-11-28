@@ -8,10 +8,15 @@ package com.polypro.dao;
 import com.polypro.helper.DateHelper;
 import com.polypro.helper.JdbcHelper;
 import com.polypro.model.GiaoDich;
+
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
+
 import java.util.List;
 
 /**
@@ -19,6 +24,7 @@ import java.util.List;
  * @author HP
  */
 public class GiaoDichDAO {
+  
      public List<GiaoDich> select(){
        
         //String sql="select HoaDon.id_HD,KhachHang.id_KH,ten_KH,NhanVien.id_NV,ten_NV,id_SP,NgayBan,DonGia,SoLuong,ThanhTien from HoaDon inner join CTHD on HoaDon.id_HD=CTHD.id_HD inner join KhachHang on HoaDon.id_KH=KhachHang.id_KH inner join NhanVien on NhanVien.id_NV=HoaDon.id_NV";
@@ -50,24 +56,27 @@ public class GiaoDichDAO {
     
     private GiaoDich readFromResultSet(ResultSet rs) throws SQLException{
         String id_MaHD=rs.getString("id_HD");
-      
+        String id_KH=rs.getString("id_KH");
         String tenKH=rs.getString("ten_KH");
+        String id_NV=rs.getString("id_NV");
         String tenNV=rs.getString("ten_NV");
+        String id_SP=rs.getString("id_SP");
         Date ngayBan=rs.getDate("NgayBan");
         int donGia=rs.getInt("DonGia");
         int soLuong=rs.getInt("SoLuong");
         int thanhTien=rs.getInt("ThanhTien");
       
-        GiaoDich model=new GiaoDich(id_MaHD, tenKH, tenNV, ngayBan, donGia, soLuong, thanhTien);
+        GiaoDich model=new GiaoDich(id_MaHD, id_KH, tenKH, id_NV, tenNV, id_SP, ngayBan, donGia, soLuong, thanhTien);
         return model;
     }
    
      public void insert(GiaoDich model){
-        String sql="call sp_GD_Insert (?)";
+        String sql="{call sp_GD_Insert (?,?,?,?,?,?,?,?)}";
         JdbcHelper.executeUpdate(sql, 
                 model.getMaHD(), 
-                model.getTen_KH(), 
-                model.getTen_NV(), 
+                model.getId_KH(), 
+                model.getId_NV(),
+                model.getId_SP(),
                 //model.getNgayKG(),
                 DateHelper.toString(model.getNgayBan(), "yyyy-MM-dd"),
                 model.getDonGia(),
@@ -76,24 +85,29 @@ public class GiaoDichDAO {
         
         );
     }
-    /*
-    public void update(GiaoDich model){
-        String sql="UPDATE KhoaHoc SET MaCD=?, HocPhi=?, ThoiLuong=?, NgayKG=?, GhiChu=?, MaNV=? WHERE MaKH=?";
+     
+      public void update(GiaoDich model){
+        String sql="{call sp_GD_Update (?,?,?,?,?,?,?,?)}";
         JdbcHelper.executeUpdate(sql, 
-                model.getMaCD(), 
-                model.getHocPhi(), 
-                model.getThoiLuong(), 
+                model.getMaHD(), 
+                model.getId_KH(), 
+                model.getId_NV(),
+                model.getId_SP(),
                 //model.getNgayKG(),
-                DateHelper.toString(model.getNgayKG(), "yyyy-MM-dd"),
-                model.getGhiChu(),
-                model.getMaNV(),
-                model.getMaKH());
+                DateHelper.toString(model.getNgayBan(), "yyyy-MM-dd"),
+                model.getDonGia(),
+                model.getSoLuong(),
+                model.getThanhTien()
+        
+        );
     }
     
-    public void delete(Integer MaKH){
-        String sql="DELETE FROM KhoaHoc WHERE MaKH=?";
+   
+    
+    public void delete(String MaKH){
+        String sql="{call sp_GD_Delete (?)}";
         JdbcHelper.executeUpdate(sql, MaKH);
-    }*/
+    }
      
      
       public GiaoDich findById(String maHD){         

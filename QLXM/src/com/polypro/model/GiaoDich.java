@@ -13,8 +13,11 @@ import java.util.Date;
  */
 public class GiaoDich {
     public String maHD;
+    public String id_KH;
     public String ten_KH;
+    public String id_NV;
     public String ten_NV;
+    public String id_SP;
     public Date ngayBan;
     public int DonGia;
     public int SoLuong;
@@ -23,22 +26,45 @@ public class GiaoDich {
     public GiaoDich() {
     }
 
-    public GiaoDich(String maHD, String ten_KH, String ten_NV, Date ngayBan, int DonGia, int SoLuong, int ThanhTien) {
+    public GiaoDich(String maHD, String id_KH, String ten_KH, String id_NV, String ten_NV, String id_SP, Date ngayBan, int DonGia, int SoLuong, int ThanhTien) {
         this.maHD = maHD;
+        this.id_KH = id_KH;
         this.ten_KH = ten_KH;
+        this.id_NV = id_NV;
         this.ten_NV = ten_NV;
+        this.id_SP = id_SP;
         this.ngayBan = ngayBan;
         this.DonGia = DonGia;
         this.SoLuong = SoLuong;
         this.ThanhTien = ThanhTien;
     }
 
+    public GiaoDich(String maHD, String id_KH, String id_NV, String id_SP, Date ngayBan, int DonGia, int SoLuong, int ThanhTien) {
+        this.maHD = maHD;
+        this.id_KH = id_KH;
+        this.id_NV = id_NV;
+        this.id_SP = id_SP;
+        this.ngayBan = ngayBan;
+        this.DonGia = DonGia;
+        this.SoLuong = SoLuong;
+        this.ThanhTien = ThanhTien;
+    }
+    
+
     public String getMaHD() {
         return maHD;
     }
 
-    public void setMaHD(String maGD) {
-        this.maHD = maGD;
+    public void setMaHD(String maHD) {
+        this.maHD = maHD;
+    }
+
+    public String getId_KH() {
+        return id_KH;
+    }
+
+    public void setId_KH(String id_KH) {
+        this.id_KH = id_KH;
     }
 
     public String getTen_KH() {
@@ -49,12 +75,28 @@ public class GiaoDich {
         this.ten_KH = ten_KH;
     }
 
+    public String getId_NV() {
+        return id_NV;
+    }
+
+    public void setId_NV(String id_NV) {
+        this.id_NV = id_NV;
+    }
+
     public String getTen_NV() {
         return ten_NV;
     }
 
     public void setTen_NV(String ten_NV) {
         this.ten_NV = ten_NV;
+    }
+
+    public String getId_SP() {
+        return id_SP;
+    }
+
+    public void setId_SP(String id_SP) {
+        this.id_SP = id_SP;
     }
 
     public Date getNgayBan() {
@@ -88,6 +130,10 @@ public class GiaoDich {
     public void setThanhTien(int ThanhTien) {
         this.ThanhTien = ThanhTien;
     }
+
+   
+
+   
     
     
 }
