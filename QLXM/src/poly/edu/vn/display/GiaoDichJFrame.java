@@ -388,11 +388,11 @@ public class GiaoDichJFrame extends javax.swing.JFrame {
         if(evt.getClickCount()==2)
         {
            this.index=tblGridView.rowAtPoint(evt.getPoint());
-            if(index>=0)
-            {
+            //if(index>=0)
+            
               this.edit();
                tabs.setSelectedIndex(0);
-            }
+            
         }
     }//GEN-LAST:event_tblGridViewMouseClicked
 
