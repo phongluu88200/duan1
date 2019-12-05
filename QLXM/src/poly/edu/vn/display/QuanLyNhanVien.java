@@ -11,14 +11,25 @@ import com.polypro.helper.DialogHelper;
 import com.polypro.helper.ShareHelper;
 import com.polypro.model.NhanVien;
 import java.awt.Image;
+<<<<<<< HEAD
 import java.awt.image.BufferedImage;
+=======
+import java.awt.Toolkit;
+>>>>>>> origin/master
 import java.io.File;
+<<<<<<< HEAD
 import java.io.IOException;
+=======
+import java.io.FileInputStream;
+>>>>>>> origin/master
 import java.util.Date;
 import java.util.List;
+<<<<<<< HEAD
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+=======
+>>>>>>> origin/master
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
@@ -40,8 +51,13 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
         this.setTitle("Quản lý nhân viên");
         this.setDefaultCloseOperation(2);
         this.load();
+<<<<<<< HEAD
 //       BufferedImage wPic = ImageIO.read(this.getClass().getResource("Hinh/anh1.jpg"));
   //      lblHinh = new JLabel(new ImageIcon(wPic));
+=======
+        //this.setIconImage(ShareHelper.APP_ICON);
+       
+>>>>>>> origin/master
     }
 
     /**
@@ -196,7 +212,7 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
         buttonGroup2.add(rdbNu);
         rdbNu.setText("Nu");
 
-        lblHinh.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lblHinh.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         lblHinh.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lblHinhMouseClicked(evt);
@@ -207,6 +223,7 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(214, 214, 214)
                 .addComponent(jLabel1)
@@ -215,12 +232,19 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(rdonhanvien)
                 .addGap(0, 0, Short.MAX_VALUE))
+=======
+>>>>>>> origin/master
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
+=======
+                            .addComponent(lblHinh, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+>>>>>>> origin/master
                             .addGroup(jPanel2Layout.createSequentialGroup()
+<<<<<<< HEAD
                                 .addGap(43, 43, 43)
                                 .addComponent(jLabel2))
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -237,8 +261,22 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(txtMaNV)
                                             .addComponent(txtTen)
+=======
+                                .addGap(56, 56, 56)
+                                .addComponent(jLabel2)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel4)
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+>>>>>>> origin/master
                                             .addGroup(jPanel2Layout.createSequentialGroup()
                                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
                                                     .addComponent(jLabel7)
                                                     .addComponent(jLabel6)
                                                     .addComponent(jLabel5))
@@ -282,6 +320,63 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
                                         .addGap(18, 18, 18)
                                         .addComponent(btnLast)))
                                 .addGap(83, 83, 83))))
+=======
+                                                    .addComponent(txtMaNV)
+                                                    .addComponent(txtTen)
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(jLabel7)
+                                                            .addComponent(jLabel6)
+                                                            .addComponent(jLabel5))
+                                                        .addGap(0, 139, Short.MAX_VALUE))
+                                                    .addComponent(txtSDT)
+                                                    .addComponent(txtPass))
+                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                                        .addGap(70, 70, 70)
+                                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                        .addComponent(jLabel10)
+                                                                        .addComponent(jLabel11)
+                                                                        .addComponent(jLabel8)
+                                                                        .addComponent(jLabel3))
+                                                                    .addGap(111, 111, 111))
+                                                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                                                    .addComponent(rdbNam)
+                                                                    .addGap(18, 18, 18)
+                                                                    .addComponent(rdbNu)
+                                                                    .addGap(64, 64, 64)))
+                                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                                .addGap(5, 5, 5)
+                                                                .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                            .addComponent(txtDiaChi, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(txtNgaySinh, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addGap(15, 15, 15)
+                                                .addComponent(jButton4)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(btnFirst)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnPrev)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnNext)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btnLast)))
+                                        .addGap(83, 83, 83))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(51, 51, 51)
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(rdoquanly)
+                                .addGap(18, 18, 18)
+                                .addComponent(rdonhanvien)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+>>>>>>> origin/master
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btnInsert)
                         .addGap(18, 18, 18)
@@ -295,6 +390,7 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
+<<<<<<< HEAD
                         .addContainerGap()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
@@ -327,23 +423,67 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtNgaySinh, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+=======
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+>>>>>>> origin/master
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(txtPass)
-                                .addGap(4, 4, 4)))
-                        .addGap(7, 7, 7)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel11))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(rdbNam)
-                            .addComponent(rdbNu)))
+                                .addContainerGap()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel3))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel1)
+                                    .addComponent(rdoquanly)
+                                    .addComponent(rdonhanvien)))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtMaNV, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(14, 14, 14)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel8))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(txtTen, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtDiaChi, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel10))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtNgaySinh, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(txtPass)
+                                        .addGap(4, 4, 4)))
+                                .addGap(7, 7, 7)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel11))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(rdbNam)
+                                    .addComponent(rdbNu))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
+<<<<<<< HEAD
                         .addGap(26, 26, 26)
                         .addComponent(lblHinh, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel2)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+=======
+                        .addGap(17, 17, 17)
+                        .addComponent(lblHinh, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(3, 3, 3)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtSDT, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 197, Short.MAX_VALUE)))
+>>>>>>> origin/master
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnInsert)
                     .addComponent(btnUpdate)
@@ -432,7 +572,7 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
                 .addComponent(jLabel9)
                 .addGap(18, 18, 18)
                 .addComponent(tabs, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
+                .addGap(54, 54, 54))
         );
 
         pack();
@@ -506,6 +646,7 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
 
     private void lblHinhMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblHinhMouseClicked
         // TODO add your handling code here:
+<<<<<<< HEAD
       try{
 //        JFileChooser file = new JFileChooser();
 //        int kq = file.showOpenDialog(file);
@@ -524,6 +665,9 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
         }catch(Exception a){
             
         }
+=======
+       // selectImage();
+>>>>>>> origin/master
     }//GEN-LAST:event_lblHinhMouseClicked
 
     /**
@@ -609,7 +753,11 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
 
     NhanVienDAO dao=new NhanVienDAO();
     int index=0;
+<<<<<<< HEAD
     String imageName = null;
+=======
+  
+>>>>>>> origin/master
     
    void load()
     {
@@ -793,6 +941,16 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
        }
     }
     
+    /* void selectImage()
+    {
+       fileChooser.showOpenDialog(this);
+       File f= fileChooser.getSelectedFile();
+        String  fileName= f.getAbsolutePath(); 
+       ImageIcon im=new ImageIcon(new ImageIcon(fileName).getImage().getScaledInstance(lblHinh.getWidth(), lblHinh.getHeight(), Image.SCALE_SMOOTH));
+       lblHinh.setIcon(im);
+       
+    }*/
+    
      void selectImage()
     {
        if(fileChooser.showOpenDialog(this)==JFileChooser.APPROVE_OPTION)
@@ -806,6 +964,7 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
       
     
     }
+<<<<<<< HEAD
      
       public void ResizeImage(String imageName) {
         ImageIcon icon = new ImageIcon("src\\image\\" + imageName);
@@ -815,4 +974,6 @@ public class QuanLyNhanVien extends javax.swing.JFrame {
         
     }
 
+=======
+>>>>>>> origin/master
 }
