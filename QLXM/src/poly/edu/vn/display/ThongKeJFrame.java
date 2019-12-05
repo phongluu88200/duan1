@@ -46,11 +46,9 @@ public class ThongKeJFrame extends javax.swing.JFrame {
         lblTitle = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         pnlDoanhThu = new javax.swing.JPanel();
-        lblNam = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         tblDoanhThu = new javax.swing.JTable();
-        txtNam = new javax.swing.JTextField();
-        btnFind = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 204, 204));
@@ -59,6 +57,7 @@ public class ThongKeJFrame extends javax.swing.JFrame {
                 formWindowOpened(evt);
             }
         });
+        getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -69,9 +68,6 @@ public class ThongKeJFrame extends javax.swing.JFrame {
         jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         pnlDoanhThu.setBackground(new java.awt.Color(204, 204, 204));
-
-        lblNam.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lblNam.setText("NĂM:");
 
         tblDoanhThu.setBackground(new java.awt.Color(204, 204, 255));
         tblDoanhThu.setModel(new javax.swing.table.DefaultTableModel(
@@ -95,37 +91,32 @@ public class ThongKeJFrame extends javax.swing.JFrame {
         });
         jScrollPane4.setViewportView(tblDoanhThu);
 
-        btnFind.setText("Tìm");
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Theo Ngày", "Theo Tháng", "Theo Năm" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlDoanhThuLayout = new javax.swing.GroupLayout(pnlDoanhThu);
         pnlDoanhThu.setLayout(pnlDoanhThuLayout);
         pnlDoanhThuLayout.setHorizontalGroup(
             pnlDoanhThuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDoanhThuLayout.createSequentialGroup()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 653, Short.MAX_VALUE)
+                .addContainerGap())
             .addGroup(pnlDoanhThuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnlDoanhThuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlDoanhThuLayout.createSequentialGroup()
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 645, Short.MAX_VALUE)
-                        .addContainerGap())
-                    .addGroup(pnlDoanhThuLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lblNam)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtNam, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnFind)
-                        .addGap(185, 185, 185))))
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlDoanhThuLayout.setVerticalGroup(
             pnlDoanhThuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlDoanhThuLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnlDoanhThuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNam)
-                    .addComponent(txtNam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnFind))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 437, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -142,7 +133,7 @@ public class ThongKeJFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 676, Short.MAX_VALUE)
+                    .addComponent(jTabbedPane1)
                     .addContainerGap()))
         );
         jPanel1Layout.setVerticalGroup(
@@ -150,7 +141,7 @@ public class ThongKeJFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblTitle)
-                .addContainerGap(545, Short.MAX_VALUE))
+                .addContainerGap(600, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(39, 39, 39)
@@ -158,19 +149,8 @@ public class ThongKeJFrame extends javax.swing.JFrame {
                     .addContainerGap()))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 0, 700, 629);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -179,6 +159,10 @@ public class ThongKeJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     
     }//GEN-LAST:event_formWindowOpened
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -219,16 +203,14 @@ public class ThongKeJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnFind;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JLabel lblNam;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JPanel pnlDoanhThu;
     private javax.swing.JTable tblDoanhThu;
-    private javax.swing.JTextField txtNam;
     // End of variables declaration//GEN-END:variables
 
   /* void init()
