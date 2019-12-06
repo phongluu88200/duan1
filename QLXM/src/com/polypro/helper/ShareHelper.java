@@ -11,6 +11,7 @@ package com.polypro.helper;
  */
 
 //import com.polypro.model.NhanVien; 
+import com.polypro.model.NhanVien;
 import java.awt.Image; 
 import java.io.File; 
 import java.nio.file.Files; 
@@ -45,13 +46,13 @@ public class ShareHelper {
           File path = new File("logos", fileName);         
           return new ImageIcon(path.getAbsolutePath());
       }
-    /*   public static NhanVien USER = null; 
+      public static NhanVien USER = null; 
         public static void logoff() {         
             ShareHelper.USER = null;     
         } 
           public static boolean authenticated() {         
               return ShareHelper.USER != null;     
           }
-      */
+      
       
 }
