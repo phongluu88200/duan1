@@ -651,7 +651,7 @@ NhanVienDAO dao=new NhanVienDAO();
         txtEmail.setText(model.getEmail());
         txtDiaChi.setText(model.getDiaChi());
         txtNgaySinh.setText(DateHelper.toString(model.getNgaySinh()));
-       // lblHinh.setToolTipText(model.getHinh());
+        lblHinh.setToolTipText(model.getHinh());
          try {
            
             BufferedImage hinh=ImageIO.read(new File(Paths.get("").toAbsolutePath().toString()+"/logos/"+model.getHinh()));

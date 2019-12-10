@@ -128,7 +128,35 @@ catch (SQLException ex) {
 }         
 return list;
 } 
-           
+          
+        public List<Object[]> getDoanhThu(int nam){         
+       List<Object[]> list=new ArrayList<>();         
+       try {             
+           ResultSet rs = null;             
+           try {                 
+               String sql="{call sp_TK_Nam (?)}";                 
+               rs = JdbcHelper.executeQuery(sql, nam);                 
+               while(rs.next()){                     
+         Object[] model={                         
+         rs.getInt("DoanhThu"), 
+                             
+         rs.getString("id_SP"),                         
+         rs.getInt("SoLuong"),                         
+         rs.getDate("NgayBD"),                         
+         rs.getDate("NgayKT")                     
+                   };                     
+         list.add(model);}
+               }              
+         finally{                 
+               rs.getStatement().getConnection().close();             
+           }         
+       }          
+         catch (SQLException e) {             
+         throw new RuntimeException(e);         
+       }         
+       return list;     
+   } 
+        
    } 
 
   

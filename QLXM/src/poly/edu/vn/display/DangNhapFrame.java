@@ -255,6 +255,7 @@ public class DangNhapFrame extends javax.swing.JDialog {
     // End of variables declaration//GEN-END:variables
 
  NhanVienDAO dao=new NhanVienDAO();
+  public static NhanVien USER = null; 
     
  void login() {
         String manv = txtUsername.getText();
@@ -329,7 +330,7 @@ public class DangNhapFrame extends javax.swing.JDialog {
        if(nv.getPass().equals(txtPass.getText()))
        {
              
-                  // user();
+                   USER=nv;
                     DialogHelper.alert(this, "Đăng nhập thành công!");
                     this.dispose();
                     
