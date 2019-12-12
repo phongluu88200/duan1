@@ -62,10 +62,10 @@ public class ThongKeJFrame extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
-        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        lblTitle.setText("THỐNG KÊ TỔNG HỢP");
+        lblTitle.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblTitle.setText("THỐNG KÊ DOANH THU");
 
         jTabbedPane1.setBackground(new java.awt.Color(204, 204, 204));
         jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));

@@ -53,6 +53,7 @@ public class MainJFrame extends javax.swing.JFrame {
         pnlTrangThai = new javax.swing.JPanel();
         lblTrangThai = new javax.swing.JLabel();
         lblDongHo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuHeThong = new javax.swing.JMenu();
         mniDangNhap = new javax.swing.JMenuItem();
@@ -72,9 +73,11 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setForeground(new java.awt.Color(204, 204, 204));
+        setIconImages(null);
 
-        jToolBar1.setBackground(new java.awt.Color(255, 0, 51));
+        jToolBar1.setBackground(new java.awt.Color(153, 153, 153));
         jToolBar1.setRollover(true);
 
         btnDangXuat.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Exit.png")); // NOI18N
@@ -142,16 +145,18 @@ public class MainJFrame extends javax.swing.JFrame {
         });
         jToolBar1.add(btnKhachHang);
 
-        pnlTrangThai.setBackground(new java.awt.Color(255, 0, 51));
+        pnlTrangThai.setBackground(new java.awt.Color(102, 102, 102));
         pnlTrangThai.setLayout(new java.awt.BorderLayout());
 
-        lblTrangThai.setBackground(new java.awt.Color(255, 0, 0));
+        lblTrangThai.setBackground(new java.awt.Color(102, 102, 102));
         lblTrangThai.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Info.png")); // NOI18N
         lblTrangThai.setText("Hệ quản lý đào tạo");
         pnlTrangThai.add(lblTrangThai, java.awt.BorderLayout.CENTER);
 
         lblDongHo.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Alarm.png")); // NOI18N
         pnlTrangThai.add(lblDongHo, java.awt.BorderLayout.LINE_END);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Documents\\NetBeansProjects\\duan1\\duan1\\QLXM\\logos\\Xe1.jpg")); // NOI18N
 
         jMenuBar1.setBackground(new java.awt.Color(153, 255, 255));
 
@@ -267,14 +272,20 @@ public class MainJFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 716, Short.MAX_VALUE)
             .addComponent(pnlTrangThai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel1)
+                .addContainerGap(48, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 457, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addComponent(pnlTrangThai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -395,6 +406,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnKetThuc;
     private javax.swing.JButton btnKhachHang;
     private javax.swing.JButton btnSanPham;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JToolBar jToolBar1;
