@@ -1,12 +1,15 @@
+package poly.edu.vn.display;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poly.edu.vn.display;
+
 
 import com.polypro.helper.DialogHelper;
 import com.polypro.helper.ShareHelper;
+import com.polypro.model.NhanVien;
 import java.awt.Desktop;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,15 +25,15 @@ import javax.swing.Timer;
  *
  * @author HP
  */
-public class MainJFrame extends javax.swing.JFrame {
+public class MainJFrame2 extends javax.swing.JFrame {
 
     /**
      * Creates new form MainJFrame
      */
-    public MainJFrame() {
+    public MainJFrame2() {
         initComponents();
         
-       
+       this.setDefaultCloseOperation(2);
         init();
     }
     
@@ -54,6 +57,8 @@ public class MainJFrame extends javax.swing.JFrame {
         lblTrangThai = new javax.swing.JLabel();
         lblDongHo = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        lblTenNV = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuHeThong = new javax.swing.JMenu();
         mniDangNhap = new javax.swing.JMenuItem();
@@ -156,7 +161,14 @@ public class MainJFrame extends javax.swing.JFrame {
         lblDongHo.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Alarm.png")); // NOI18N
         pnlTrangThai.add(lblDongHo, java.awt.BorderLayout.LINE_END);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Documents\\NetBeansProjects\\duan1\\duan1\\QLXM\\logos\\Xe1.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Documents\\NetBeansProjects\\duan1\\duan1\\QLXM\\logos\\NV.jpg")); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 51, 255));
+        jLabel2.setText("Xin chào :");
+
+        lblTenNV.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        lblTenNV.setForeground(new java.awt.Color(51, 0, 255));
 
         jMenuBar1.setBackground(new java.awt.Color(153, 255, 255));
 
@@ -276,16 +288,25 @@ public class MainJFrame extends javax.swing.JFrame {
             .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(jLabel1)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblTenNV, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel1))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblTenNV, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addComponent(pnlTrangThai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -381,21 +402,27 @@ public class MainJFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainJFrame2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainJFrame2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainJFrame2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainJFrame2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainJFrame().setVisible(true);
+                new MainJFrame2().setVisible(true);
             }
         });
     }
@@ -407,10 +434,12 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnKhachHang;
     private javax.swing.JButton btnSanPham;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JLabel lblDongHo;
+    private javax.swing.JLabel lblTenNV;
     private javax.swing.JLabel lblTrangThai;
     private javax.swing.JMenuItem mniDangNhap;
     private javax.swing.JMenuItem mniDangXuat;
@@ -443,8 +472,10 @@ public class MainJFrame extends javax.swing.JFrame {
           
             }
         }).start();
-         new ChaoJDialog(this,true).setVisible(true);
-        login();
+        // new ChaoJDialog(this,true).setVisible(true);
+       // login();
+       NhanVien model=DangNhapFrame.USER;
+       lblTenNV.setText(model.getTen_NV());
     }
     
      void login()
@@ -455,13 +486,10 @@ public class MainJFrame extends javax.swing.JFrame {
     
     
      void openNhanVien(){ 
-        //if(ShareHelper.authenticated()){ 
-            new NhanVienFrame().setVisible(true); 
+        
+            new NhanVienUser().setVisible(true); 
         } 
-       // else{ 
-        //    DialogHelper.alert(this, "Vui lòng đăng nhập!"); 
-        //} 
-   // }
+    
      
     void exit()
     {
@@ -473,55 +501,32 @@ public class MainJFrame extends javax.swing.JFrame {
     
     void openKhachHang()
     {
-      //  if(ShareHelper.authenticated()){
              new QuanLyKhachHang().setVisible(true);
         
         }
-      //  else{
-       //    DialogHelper.alert(this,"Vui lòng đăng nhập!");
-      //  }
-    
-    //}
+      
      void openGiaoDich()
     {
-       // if(ShareHelper.authenticated()){
+      
              new GiaoDichJFrame().setVisible(true);
         
         }
-   //     else{
-    //        DialogHelper.alert(this,"Vui lòng đăng nhập!");
-   //     }
-    
-   // }
+  
     
     void openSanPham()
     {
-      //  if(ShareHelper.authenticated()){
+     
              new SanPhamJFrame().setVisible(true);
         
         }
-       // else{
-        //    DialogHelper.alert(this,"Vui lòng đăng nhập!");
-       // }
-    
-    //}
+       
     void openThongKe(int index)
     {
-      //  if(ShareHelper.authenticated()){
+     
              new ThongKeJFrame(index).setVisible(true);
         
         }
-        //else{
-        //    DialogHelper.alert(this,"Vui lòng đăng nhập!");
-       // }
-    
-  // }
-    
-   /* void openAbout()
-    {
-        new GioiThieuJDialog(this,true).setVisible(true);
-    
-    }*/
+      
     
     void logoOff()
     {

@@ -39,16 +39,6 @@ public class NhanVien {
         this.hinh = hinh;
     }
 
-    public String getPass() {
-        return pass;
-    }
-
-    public void setPass(String pass) {
-        this.pass = pass;
-    }
-
-   
-
     public String getId_NV() {
         return id_NV;
     }
@@ -63,6 +53,14 @@ public class NhanVien {
 
     public void setTen_NV(String ten_NV) {
         this.ten_NV = ten_NV;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
     public String getSdt() {
@@ -120,7 +118,11 @@ public class NhanVien {
     public void setHinh(String hinh) {
         this.hinh = hinh;
     }
-    
+
+   
+
+   
+
     
     
 }

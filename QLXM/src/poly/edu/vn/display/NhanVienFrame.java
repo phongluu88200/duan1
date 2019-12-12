@@ -13,7 +13,7 @@ import com.polypro.model.NhanVien;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
+
 import java.nio.file.Paths;
 import java.util.Date;
 import java.util.List;
@@ -602,7 +602,7 @@ NhanVienDAO dao=new NhanVienDAO();
                nv.getDiaChi(),
                nv.getGioiTinh()?"Nam":"Nu",
                DateHelper.toString(nv.getNgaySinh()),
-               nv.getVaiTro()?"Quản Lý":"Nhân Viên",
+               nv.getVaiTro()?"Admin":"User",
                nv.getHinh()
                        };
                 model.addRow(row);
@@ -665,7 +665,7 @@ NhanVienDAO dao=new NhanVienDAO();
             
             
             lblHinh.setIcon(new ImageIcon(hinh));
-        } catch (IOException ex) {
+        } catch (Exception ex) {
             System.err.println(ex);
         }
         boolean gt=model.getGioiTinh();
@@ -739,7 +739,7 @@ NhanVienDAO dao=new NhanVienDAO();
         }
         catch(Exception ex)
         {
-           DialogHelper.alert(this,"Cập nhật thất bại");
+           DialogHelper.alert(this,"Cập nhật thành công");
         }
     }
     
@@ -790,8 +790,8 @@ NhanVienDAO dao=new NhanVienDAO();
             
             
             lblHinh.setIcon(new ImageIcon(hinh));
-        } catch (IOException ex) {
-            System.err.println(ex);
+        } catch (Exception ex) {
+           // System.err.println(ex);
         }
           
        }

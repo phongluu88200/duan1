@@ -7,12 +7,15 @@ package poly.edu.vn.display;
 
 import com.polypro.dao.NhanVienDAO;
 import com.polypro.helper.DialogHelper;
+import com.polypro.helper.JdbcHelper;
 import com.polypro.helper.ShareHelper;
 import com.polypro.model.NhanVien;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,9 +30,9 @@ public class DangNhapFrame extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
         this.setLocationRelativeTo(null);
-        
+        new ChaoJDialog(null,true).setVisible(true);
     }
-
+   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -84,7 +87,7 @@ public class DangNhapFrame extends javax.swing.JDialog {
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Username:");
+        jLabel3.setText("ID :");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -179,9 +182,10 @@ public class DangNhapFrame extends javax.swing.JDialog {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-       // login();
-       // checkLogin(txtUsername.getText(), txtPass.getText());
-       danhNhap();
+       
+      dangNhap();
+      
+      
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
@@ -256,48 +260,7 @@ public class DangNhapFrame extends javax.swing.JDialog {
 
  NhanVienDAO dao=new NhanVienDAO();
   public static NhanVien USER = null; 
-    
- void login() {
-        String manv = txtUsername.getText();
-        String matKhau =String.valueOf(txtPass.getPassword());
-        if(manv.length()==0)
-        {
-                DialogHelper.alert(this,"Bạn nhập thiếu tên user");
-                txtUsername.requestFocus();
-                return;
-        
-        }
-         if(matKhau.length()==0)
-        {
-                DialogHelper.alert(this,"Bạn nhập thiếu password");
-                txtPass.requestFocus();
-                return;
-        
-        }
-        
-        try {
-            NhanVien nhanVien = dao.findById(manv);
-            
-            if(nhanVien != null){
-                String matKhau2 = nhanVien.getPass();
-                if(nhanVien.getPass().equals(txtPass.getPassword())){
-                    ShareHelper.USER = nhanVien;
-                    DialogHelper.alert(this, "Đăng nhập thành công!");
-                    this.dispose();
-                }
-                else{
-                    DialogHelper.alert(this, "Sai mật khẩu!");
-                }
-            }
-            else{
-                DialogHelper.alert(this, "Sai tên đăng nhập!");
-            }
-        } 
-        catch (Exception e) {
-            DialogHelper.alert(this, "Lỗi truy vấn dữ liệu!");
-        }
-    }
-    
+  
     void exit()
     {
          if(DialogHelper.confirm(this,"Bạn có muốn thoát khỏi ứng dụng không"))
@@ -306,42 +269,61 @@ public class DangNhapFrame extends javax.swing.JDialog {
          }
     
     }
-    void danhNhap()
-    {
+    void dangNhap()
+    {    
          String manv = txtUsername.getText();
         String matKhau =String.valueOf(txtPass.getPassword());
         if(manv.length()==0)
         {
                 DialogHelper.alert(this,"Bạn nhập thiếu tên user");
                 txtUsername.requestFocus();
-                return;
+           return ;
         
         }
          if(matKhau.length()==0)
         {
                 DialogHelper.alert(this,"Bạn nhập thiếu password");
                 txtPass.requestFocus();
-                return;
+              return ;  
         
         }
        NhanVien nv=dao.findById(txtUsername.getText());
-      
+       try{
        if(nv!=null){
-       if(nv.getPass().equals(txtPass.getText()))
-       {
-             
+           
+               if(nv.getPass().equals(txtPass.getText()))
+                {    
                    USER=nv;
-                    DialogHelper.alert(this, "Đăng nhập thành công!");
-                    this.dispose();
                     
-       }
-      else{
-            DialogHelper.alert(this, "Đăng nhập không thành công!");
-      }
+                    DialogHelper.alert(this, "Đăng nhập thành công!");
+                    
+                     this.dispose();
+                     if(nv.getVaiTro()==true)
+                     {
+                     new MainJFrame1().setVisible(true);
+                     this.setVisible(false);
+                     }
+                     else{
+                     new MainJFrame2().setVisible(true);
+                     this.setVisible(false);
+                     }
+           
+                }
+              else{
+                   DialogHelper.alert(this, "Sai mật khẩu!");
+       
+                  }
        }
        else{
             DialogHelper.alert(this, "Sai tên đăng nhập!");
        }
+       }
+       catch(Exception ex)
+       {
+       DialogHelper.alert(this, "Lỗi truy vấn dữ liệu");
+       
+       }
+     // return nv;
     }
     
     void user()
@@ -357,5 +339,9 @@ public class DangNhapFrame extends javax.swing.JDialog {
        }
     
     }
+    
+     
+      
+    
     
 }

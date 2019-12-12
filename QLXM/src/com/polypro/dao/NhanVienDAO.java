@@ -7,6 +7,9 @@ package com.polypro.dao;
 import  com.polypro.helper.DateHelper;
 import com.polypro.helper.JdbcHelper;
 import com.polypro.model.NhanVien;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -17,7 +20,7 @@ import java.util.List;
  * @author HP
  */
 public class NhanVienDAO {
-    
+   
      public void insert(NhanVien model){         
        String sql="INSERT INTO NhanVien (id_NV, ten_NV, MatKhau ,SDT, Email, DiaChi, GioiTinh,NgaySinh, VaiTro,Hinh) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";         
        JdbcHelper.executeUpdate(sql,                  
@@ -94,7 +97,11 @@ public class NhanVienDAO {
           List<NhanVien> list = select(sql, maSP);         
           return list.size() > 0 ? list.get(0) : null;
       }   
-  
+       public NhanVien findById1(String user, String pass){         
+          String sql="SELECT * FROM NhanVien WHERE id_NV=? and MatKhau=?";         
+          List<NhanVien> list = select(sql,user,pass);         
+          return list.size() > 0 ? list.get(0) : null;
+      }  
       private NhanVien readFromResultSet(ResultSet rs) throws SQLException{         
           NhanVien model=new NhanVien();         
           model.setId_NV(rs.getString("id_NV"));         
