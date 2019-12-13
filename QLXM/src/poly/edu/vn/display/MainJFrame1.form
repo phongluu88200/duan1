@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <Properties>
@@ -20,7 +20,7 @@
                   <KeyStroke key="Ctrl+L"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Key.png"/>
+                  <Image iconType="3" name="/com/polypro/icon/Key.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng nh&#x1ead;p"/>
               </Properties>
@@ -34,7 +34,7 @@
                   <KeyStroke key="Ctrl+O"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Log out.png"/>
+                  <Image iconType="3" name="/com/polypro/icon/Exit.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng xu&#x1ea5;t"/>
               </Properties>
@@ -47,7 +47,7 @@
                   <KeyStroke key="F10"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Stop.png"/>
+                  <Image iconType="3" name="/com/polypro/icon/Stop.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="K&#x1ebf;t th&#xfa;c"/>
               </Properties>
@@ -65,7 +65,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniGiaoDich">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Conference.png"/>
+                  <Image iconType="3" name="/com/polypro/icon/List.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Giao D&#x1ecb;ch"/>
               </Properties>
@@ -76,7 +76,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniNhanVien">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\User group.png"/>
+                  <Image iconType="3" name="/com/polypro/icon/User.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Nh&#xe2;n vi&#xea;n"/>
               </Properties>
@@ -87,7 +87,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniSanPham">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Certificate.png"/>
+                  <Image iconType="3" name="/com/polypro/icon/Bricks.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="S&#x1ea3;n ph&#x1ea9;m"/>
               </Properties>
@@ -98,7 +98,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniKhachHang">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Lists.png"/>
+                  <Image iconType="3" name="/com/polypro/icon/User group.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Kh&#xe1;ch h&#xe0;ng"/>
               </Properties>
@@ -116,9 +116,9 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniTKNguoiHoc">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Clien list.png"/>
+                  <Image iconType="3" name="/com/polypro/icon/Coins.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Ng&#x1b0;&#x1edd;i h&#x1ecd;c t&#x1eeb;ng n&#x103;m"/>
+                <Property name="text" type="java.lang.String" value="Doanh Thu S&#x1ea3;n Ph&#x1ea9;m"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mniTKNguoiHocActionPerformed"/>
@@ -137,7 +137,7 @@
                   <KeyStroke key="F1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Globe.png"/>
+                  <Image iconType="3" name="/com/polypro/icon/Book.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="H&#x1b0;&#x1edb;ng d&#x1eab;n s&#x1eed; d&#x1ee5;ng"/>
               </Properties>
@@ -148,7 +148,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniGioiThieu">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Brick house.png"/>
+                  <Image iconType="3" name="/com/polypro/icon/Home.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gi&#x1edb;i thi&#x1ec7;u s&#x1ea3;n ph&#x1ea9;m"/>
               </Properties>
@@ -196,23 +196,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="pnlTrangThai" alignment="0" max="32767" attributes="0"/>
-          <Component id="jToolBar1" alignment="0" max="32767" attributes="0"/>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="48" max="32767" attributes="0"/>
-          </Group>
+          <Component id="pnlTrangThai" min="-2" max="-2" attributes="0"/>
+          <Component id="jToolBar1" min="-2" pref="712" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Component id="jToolBar1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="41" max="32767" attributes="0"/>
+              <Component id="jToolBar1" min="-2" pref="57" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="pnlTrangThai" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="329" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -231,7 +225,7 @@
         <Component class="javax.swing.JButton" name="btnDangXuat">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Exit.png"/>
+              <Image iconType="3" name="/com/polypro/icon/Log out.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng xu&#x1ea5;t"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -248,7 +242,7 @@
         <Component class="javax.swing.JButton" name="btnKetThuc">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Stop.png"/>
+              <Image iconType="3" name="/com/polypro/icon/Stop.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="K&#x1ebf;t th&#xfa;c"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -265,7 +259,7 @@
         <Component class="javax.swing.JButton" name="btnGiaoDich">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Conference.png"/>
+              <Image iconType="3" name="/com/polypro/icon/Lists.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Giao d&#x1ecb;ch"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -282,7 +276,7 @@
         <Component class="javax.swing.JButton" name="btnSanPham">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Certificate.png"/>
+              <Image iconType="3" name="/com/polypro/icon/Bricks.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="S&#x1ea3;n ph&#x1ea9;m"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -299,7 +293,7 @@
         <Component class="javax.swing.JButton" name="btnKhachHang">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Globe.png"/>
+              <Image iconType="3" name="/com/polypro/icon/User group.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Kh&#xe1;ch h&#xe0;ng"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -324,28 +318,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="lblTrangThai">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="66" green="66" red="66" type="rgb"/>
-            </Property>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Info.png"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="H&#x1ec7; qu&#x1ea3;n l&#xfd; &#x111;&#xe0;o t&#x1ea1;o"/>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-              <BorderConstraints direction="Center"/>
-            </Constraint>
-          </Constraints>
-        </Component>
         <Component class="javax.swing.JLabel" name="lblDongHo">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\DuAnMau\Tai nguyen sinh vien\Tai nguyen khac\Hinh\Alarm.png"/>
-            </Property>
-          </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
               <BorderConstraints direction="After"/>
@@ -355,11 +328,6 @@
       </SubComponents>
     </Container>
     <Component class="javax.swing.JLabel" name="jLabel1">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\HP\Documents\NetBeansProjects\duan1\duan1\QLXM\logos\Xe1.jpg"/>
-        </Property>
-      </Properties>
     </Component>
   </SubComponents>
 </Form>

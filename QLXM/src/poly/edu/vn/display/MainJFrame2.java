@@ -85,7 +85,6 @@ public class MainJFrame2 extends javax.swing.JFrame {
         jToolBar1.setBackground(new java.awt.Color(153, 153, 153));
         jToolBar1.setRollover(true);
 
-        btnDangXuat.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Exit.png")); // NOI18N
         btnDangXuat.setText("Đăng xuất");
         btnDangXuat.setFocusable(false);
         btnDangXuat.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -98,7 +97,6 @@ public class MainJFrame2 extends javax.swing.JFrame {
         });
         jToolBar1.add(btnDangXuat);
 
-        btnKetThuc.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Stop.png")); // NOI18N
         btnKetThuc.setText("Kết thúc");
         btnKetThuc.setFocusable(false);
         btnKetThuc.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -111,7 +109,6 @@ public class MainJFrame2 extends javax.swing.JFrame {
         });
         jToolBar1.add(btnKetThuc);
 
-        btnGiaoDich.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Conference.png")); // NOI18N
         btnGiaoDich.setText("Giao dịch");
         btnGiaoDich.setFocusable(false);
         btnGiaoDich.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -124,7 +121,6 @@ public class MainJFrame2 extends javax.swing.JFrame {
         });
         jToolBar1.add(btnGiaoDich);
 
-        btnSanPham.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Certificate.png")); // NOI18N
         btnSanPham.setText("Sản phẩm");
         btnSanPham.setFocusable(false);
         btnSanPham.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -137,7 +133,6 @@ public class MainJFrame2 extends javax.swing.JFrame {
         });
         jToolBar1.add(btnSanPham);
 
-        btnKhachHang.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Globe.png")); // NOI18N
         btnKhachHang.setText("Khách hàng");
         btnKhachHang.setFocusable(false);
         btnKhachHang.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -154,14 +149,9 @@ public class MainJFrame2 extends javax.swing.JFrame {
         pnlTrangThai.setLayout(new java.awt.BorderLayout());
 
         lblTrangThai.setBackground(new java.awt.Color(102, 102, 102));
-        lblTrangThai.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Info.png")); // NOI18N
         lblTrangThai.setText("Hệ quản lý đào tạo");
         pnlTrangThai.add(lblTrangThai, java.awt.BorderLayout.CENTER);
-
-        lblDongHo.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Alarm.png")); // NOI18N
         pnlTrangThai.add(lblDongHo, java.awt.BorderLayout.LINE_END);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\HP\\Documents\\NetBeansProjects\\duan1\\duan1\\QLXM\\logos\\NV.jpg")); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 2, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 51, 255));
@@ -175,7 +165,6 @@ public class MainJFrame2 extends javax.swing.JFrame {
         mnuHeThong.setText("Hệ thống ");
 
         mniDangNhap.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_MASK));
-        mniDangNhap.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Key.png")); // NOI18N
         mniDangNhap.setText("Đăng nhập");
         mniDangNhap.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,13 +174,11 @@ public class MainJFrame2 extends javax.swing.JFrame {
         mnuHeThong.add(mniDangNhap);
 
         mniDangXuat.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
-        mniDangXuat.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Log out.png")); // NOI18N
         mniDangXuat.setText("Đăng xuất");
         mnuHeThong.add(mniDangXuat);
         mnuHeThong.add(jSeparator2);
 
         mniKetThuc.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F10, 0));
-        mniKetThuc.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Stop.png")); // NOI18N
         mniKetThuc.setText("Kết thúc");
         mniKetThuc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,7 +191,6 @@ public class MainJFrame2 extends javax.swing.JFrame {
 
         mnuSanPham.setText("Quản lý");
 
-        mniGiaoDich.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Conference.png")); // NOI18N
         mniGiaoDich.setText("Giao Dịch");
         mniGiaoDich.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,7 +199,6 @@ public class MainJFrame2 extends javax.swing.JFrame {
         });
         mnuSanPham.add(mniGiaoDich);
 
-        mniNhanVien.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\User group.png")); // NOI18N
         mniNhanVien.setText("Nhân viên");
         mniNhanVien.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -222,7 +207,6 @@ public class MainJFrame2 extends javax.swing.JFrame {
         });
         mnuSanPham.add(mniNhanVien);
 
-        mniSanPham.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Certificate.png")); // NOI18N
         mniSanPham.setText("Sản phẩm");
         mniSanPham.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -231,7 +215,6 @@ public class MainJFrame2 extends javax.swing.JFrame {
         });
         mnuSanPham.add(mniSanPham);
 
-        mniKhachHang.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Lists.png")); // NOI18N
         mniKhachHang.setText("Khách hàng");
         mniKhachHang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -244,7 +227,6 @@ public class MainJFrame2 extends javax.swing.JFrame {
 
         mnuThongKe.setText("Thống kê");
 
-        mniTKNguoiHoc.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Clien list.png")); // NOI18N
         mniTKNguoiHoc.setText("Người học từng năm");
         mniTKNguoiHoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -258,7 +240,6 @@ public class MainJFrame2 extends javax.swing.JFrame {
         mnuTroGiup.setText("Trợ giúp");
 
         mniHuongDan.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
-        mniHuongDan.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Globe.png")); // NOI18N
         mniHuongDan.setText("Hướng dẫn sử dụng");
         mniHuongDan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,7 +248,6 @@ public class MainJFrame2 extends javax.swing.JFrame {
         });
         mnuTroGiup.add(mniHuongDan);
 
-        mniGioiThieu.setIcon(new javax.swing.ImageIcon("C:\\DuAnMau\\Tai nguyen sinh vien\\Tai nguyen khac\\Hinh\\Brick house.png")); // NOI18N
         mniGioiThieu.setText("Giới thiệu sản phẩm");
         mniGioiThieu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -285,7 +265,7 @@ public class MainJFrame2 extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlTrangThai, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 975, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -294,7 +274,7 @@ public class MainJFrame2 extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(lblTenNV, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel1))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -306,7 +286,7 @@ public class MainJFrame2 extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(pnlTrangThai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 

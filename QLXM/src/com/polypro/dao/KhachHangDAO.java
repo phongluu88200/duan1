@@ -80,10 +80,6 @@ public class KhachHangDAO {
             return list;
     }  
         
-      /* public List<NguoiHoc> selectByCourse(Integer makh){         
-            String sql="SELECT * FROM NguoiHoc WHERE MaNH NOT IN (SELECT MaNH FROM HocVien WHERE MaKH=?)";         
-            return select(sql, makh);
-        }   */
       public KhachHang findById(String maSP){         
           String sql="SELECT * FROM KhachHang WHERE id_KH=?";         
           List<KhachHang> list = select(sql, maSP);         

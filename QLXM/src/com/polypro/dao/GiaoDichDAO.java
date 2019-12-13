@@ -26,8 +26,6 @@ import java.util.List;
 public class GiaoDichDAO {
   
      public List<GiaoDich> select(){
-       
-        //String sql="select HoaDon.id_HD,KhachHang.id_KH,ten_KH,NhanVien.id_NV,ten_NV,id_SP,NgayBan,DonGia,SoLuong,ThanhTien from HoaDon inner join CTHD on HoaDon.id_HD=CTHD.id_HD inner join KhachHang on HoaDon.id_KH=KhachHang.id_KH inner join NhanVien on NhanVien.id_NV=HoaDon.id_NV";
         String sql="{call sp_GiaoDich}";
         
         return select(sql);
